@@ -1,0 +1,37 @@
+name: 🐛 Hata Raporu
+description: Projede karşılaştığınız bir hatayı bildirin.
+title: "[Hata]: "
+labels: ["type: bug", "status: 1-planning"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Hata Açıklaması
+      description: Lütfen karşılaştığınız hatayı net bir şekilde açıklayın.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Tekrarlama Adımları
+      description: Hatayı yeniden oluşturabilmemiz için gerekli adımları listeleyin.
+      placeholder: |
+        1. ... sayfasına git
+        2. ... butonuna tıkla
+        3. Hata ile karşılaş.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Beklenen Davranış
+      description: Normalde ne olmasını bekliyordunuz?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### ✅ Sonraki Adım: Katkı Planı
+
+        Bu hatanın çözümü için bir **Katkı Planı (`CONTRIBUTION_PLAN.md`)** oluşturulması gerekmektedir. Lütfen planı hazırlayıp bu Issue'ya linkini ekleyin.

@@ -1,0 +1,19 @@
+project:
+  name: "proje-adi-buraya-gelecek"
+  description: >
+    Bu depo, yapay zeka destekli geliştirme ve bağlamsal işbirliğini
+    sağlamak için AICRA mimarisini takip eder.
+languages: [python, typescript] # Projenizin dillerini buraya yazın
+frameworks: [fastapi, react] # Projenizin framework'lerini buraya yazın
+rules:
+  - "docs/architecture.md dosyasına uyulmalıdır"
+  - "governance/code-of-conduct.md kurallarına saygı gösterilmelidir"
+  - "Modüler ve dokümante edilmiş kod tercih edilir"
+agents:
+  - name: CodeAgent
+    permissions: [read_docs, write_src, write_tests, propose_pull_request]
+    description: "Bir KATKI_PLANI'na göre kaynak kodu ve birim testleri üretir/iyileştirir."
+  - name: TestAgent
+    permissions: [read_src, run_tests, generate_reports]
+    description: "Testleri çalıştırır ve kod kalitesi hakkında raporlar oluşturur."
+context_version: "1.0"

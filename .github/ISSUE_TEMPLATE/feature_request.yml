@@ -1,0 +1,28 @@
+name: 🚀 Yeni Özellik Talebi
+description: Proje için yeni bir özellik veya iyileştirme öner.
+title: "[Özellik]: "
+labels: ["type: feature", "status: 1-planning"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Harika bir fikriniz olduğu için teşekkürler! Lütfen aşağıdaki adımları takip edin.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Özellik Açıklaması
+      description: Lütfen eklenmesini istediğiniz özelliği veya iyileştirmeyi kısaca ve net bir şekilde açıklayın. Bu özelliğin hangi problemi çözeceğini belirtin.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### ✅ Sonraki Adım: Katkı Planı
+
+        Bu özelliğin hayata geçirilmesi için bir **Katkı Planı (`CONTRIBUTION_PLAN.md`)** oluşturulması gerekmektedir. 
+
+        1. Projenin ana dizinindeki `CONTRIBUTION_PLAN.md` dosyasını kopyalayın.
+        2. Dosyayı `plan/feature-ozellik-adi.md` şeklinde yeniden adlandırın.
+        3. Planın içeriğini bu özellik talebine göre doldurun.
+        4. Doldurduğunuz planı depoya commit'leyin ve bu Issue'ya linkini ekleyin.

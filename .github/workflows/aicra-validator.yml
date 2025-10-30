@@ -1,0 +1,26 @@
+# AICRA Standart Doğrulayıcı
+# Bu iş akışı, her Pull Request'in bir Katkı Planı ile ilişkili olduğunu doğrular.
+name: AICRA Validator
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize] # PR açıldığında, düzenlendiğinde veya yeni commit geldiğinde çalışır
+    branches:
+      - main # Sadece ana branch'e yönelik PR'ları kontrol eder
+
+jobs:
+  validate-plan-link:
+    name: Katkı Planı Kontrolü
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR Açıklamasını Kontrol Et
+        run: |
+          # GitHub'ın sağladığı PR açıklamasını (body) al ve içinde "plan/" veya ".md" arat.
+          # Bu, bir Katkı Planı dosyasına link verilip verilmediğini basitçe kontrol eder.
+          if ! echo "${{ github.event.pull_request.body }}" | grep -q -E "(plan/|CONTRIBUTION_PLAN.md)"; then
+            echo "❌ HATA: Pull Request açıklaması bir Katkı Planı'na referans içermiyor."
+            echo "Lütfen PR açıklamasına ilgili 'CONTRIBUTION_PLAN.md' dosyasının linkini ekleyin."
+            exit 1
+          else
+            echo "✅ Başarılı: Pull Request bir Katkı Planı ile ilişkilendirilmiş."
+          fi

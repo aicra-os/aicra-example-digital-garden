@@ -1,0 +1,10 @@
+aicra_version: 1.0
+repository_type: "general-purpose" # web-api, ml-model, library vb. olarak değiştirilebilir
+governance_level: "strict-human-approval"
+context_sources:
+  - ./docs/ai-context.yaml
+  - ./docs/architecture.md
+  - ./docs/development-guide.md
+audit:
+  enable_context_tracking: true
+  ai_commit_annotation: true

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "digital-garden-api"
+version = "0.1.0"
+description = "AICRA standardı ile geliştirilen Dijital Bahçe API'si"
+authors = ["aicra-os"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+httpx = "^0.25.1" # Testler için async client
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

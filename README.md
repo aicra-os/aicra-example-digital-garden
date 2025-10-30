@@ -1,5 +1,9 @@
 # AICRA Depo Şablonu
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aicra-os/.github/main/assets/aicra-logo.svg" alt="AICRA-OS Logo" width="200">
+</p>
+
 [![AICRA Spec v1.0](https://img.shields.io/badge/AICRA_Spec-v1.0-blue.svg)](https://github.com/aicra-os/specification)
 
 Bu depo, **AICRA (AI-Contextual Repository Architecture)** standardına uygun, her tür projede (web, backend, AI, DevOps...) kullanılabilecek, yapay zeka ve insan işbirliğine hazır bir başlangıç şablonudur.
